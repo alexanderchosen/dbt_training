@@ -41,3 +41,18 @@ models:
               arguments:
                 to: ref('stg_customers')
                 field: customer_id
+
+  - name: stg_payment
+    columns:
+      - name: payment_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id

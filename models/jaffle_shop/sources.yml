@@ -8,3 +8,5 @@ sources:
             description: One record per customer.
           - name: orders
             description: One record per order. Includes cancelled and deleted orders.
+          - name: payment
+            description: Record of payments made by customers, payment method and status
